@@ -13,7 +13,7 @@ resource "aws_instance" "my-test-instance" {
   user_data = <<-EOF
               #!/bin/bash
               echo "Hello, World" > index.html
-              nohup busybox httpd -f -p "${var.server_port}" &
+              nohup busybox httpd -f -p "${var.SERVER_PORT}" &
               EOF
 
   tags {
